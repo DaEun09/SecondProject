@@ -1,0 +1,29 @@
+<head>
+    <title> Introduce Yourself </title>
+</head>
+
+<body>
+
+    <div style="padding-left:100px; padding-right: 100px; text-align: center;">
+        <b>
+            <p style="background-color:rgb(46, 46, 255); font-size: 50px; color: white;"> Portfolio </p>
+        </b>
+        <a href="{% url 'new'%}" class="top-menu"><h3>자기소개 하기</h3></a>
+        
+      
+        <h1 style="background-color:rgb(130, 184, 255); font-size: 40px; color: white;">List</h1>
+        {% for post in posts.all %}
+            <div class="container">
+                <h2><a href="/portfolio/post/{{post.id}}/">{{post.name}}</a></h2>
+                <p>{{post.created_date}}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+
+
+
+
+</body>

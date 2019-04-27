@@ -1,0 +1,13 @@
+<head>
+
+</head>
+
+<body>
+    <h1>글 수정하기</h1>
+    <form method="Person" class="post-form">
+        {% csrf_token %}
+        <!-- {% csrf_token %} 보안을 위해서 작성-->
+        {{ form.as_p }}
+        <button type="submit" class="brn brn-secondary">저장</button>
+    </form>
+</body>
